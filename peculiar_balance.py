@@ -77,7 +77,5 @@ def answer(x):
             answer.append('-')
     return answer
 
-print answer(2)
-
 # for i in range(1, 15):
 #     print str(i) + ": " + str(answer(i))
