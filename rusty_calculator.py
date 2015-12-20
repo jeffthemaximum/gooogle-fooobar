@@ -71,8 +71,3 @@ while operator_stack.isEmpty() is False:
     output_string += operator_stack.pop()
 
 print output_string
-
-
-
-
-
