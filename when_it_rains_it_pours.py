@@ -1,7 +1,11 @@
+# search right and left solution
+
 import pudb
 
 
 def answer(x):
+    if len(x) < 3:
+        return 0
 
     # make copy of x here and enumerate with list indices
     enumerated_x = [pair for pair in enumerate(x)]
@@ -15,7 +19,7 @@ def answer(x):
 
     i = maximum_index + 1
     water_total = 0
-
+    pu.db
     # bloated code to find water to the right of the highest rabbit hutch
     while((i - 1) != end_index):
         # find max in right half and index
@@ -27,13 +31,16 @@ def answer(x):
         else:
             break
 
+        j = maximum_index
         # check to make sure right half maximum isn't maximum_index + 1
-        while (right_half_maximum_index == maximum_index + 1 and right_half_maximum_index != end_index):
+        while (right_half_maximum_index == j + 1 and right_half_maximum_index != end_index):
             # find max in right half and index
-            right_half = enumerated_x[(maximum_index+1):(end+1)]
-            right_half_maximum_tuple = max(right_half, key=lambda x: x[1])
+            check_half = enumerated_x[(j+1):(end_index+1)]
+            right_half_maximum_tuple = max(check_half, key=lambda x: x[1])
             right_half_maximum = right_half_maximum_tuple[1]
-            right_half_maximum_index = right_half_maximum[0]
+            right_half_maximum_index = right_half_maximum_tuple[0]
+            j += 1
+
 
         # iterate across items between maximum and right half maximum
         # find different between items and lowest of maximum and right_half_maximum
@@ -90,4 +97,4 @@ def answer(x):
 
     return water_total
 
-print(answer([4, 2, 5, 1, 2, 3, 1, 2]))
+print(answer([4, 2, 5, 3, 2, 3, 1, 2]))
