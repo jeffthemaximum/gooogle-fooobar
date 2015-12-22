@@ -29,9 +29,6 @@ def answer(x):
         #append difference to heights in tuple form
         heights.append([difference])
 
-    # keep seperate iterator for reverse iteration for simplicity's sake
-    k = 0
-
     #reset maxim to zero
     maxim = 0
 
