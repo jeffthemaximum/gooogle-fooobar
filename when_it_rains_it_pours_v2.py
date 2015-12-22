@@ -57,9 +57,10 @@ def answer(x):
         #append difference to heights in tuple form
         heights[j].append(difference)
 
-
+    # get minimum height at each bunny hutch
     heights = map(lambda x: min(x), heights)
 
+    # add heights and return
     return sum(heights)
 
 
