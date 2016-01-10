@@ -58,6 +58,6 @@ def answer(x):
 digest = [0, 129, 5, 141, 25, 137, 61, 149, 113, 145, 53, 157, 233, 185, 109, 165]
 
 wrapped = wrapper(answer, digest)
-print timeit.timeit(wrapped, number=1000)
+print timeit.timeit(wrapped, number=1)
 
 print answer(digest)

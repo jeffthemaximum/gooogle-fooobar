@@ -77,5 +77,5 @@ def answer(x):
             answer.append('-')
     return answer
 
-for i in range(1, 110000):
+for i in range(1, 110000tags):
     print str(i) + ": " + str(answer(i))
